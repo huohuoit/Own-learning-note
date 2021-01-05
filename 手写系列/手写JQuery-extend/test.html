@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../手写JQuery-extend/extend.js"></script>
+</head>
+
+<body>
+    <script>
+        var test = extend(true, [1, 2, 3], [4, 5, 6]);
+        console.log(test);  // [4, 5, 6]
+
+        // 思考
+        var a = extend(true, [4, 5, 6, 7, 8, 9], [1, 2, 3]);
+        console.log(a); // [1, 2, 3, 7, 8, 9]
+        var obj1 = {
+            value: {
+                3: 1
+            }
+        }
+
+        var obj2 = {
+            value: [5, 6, 7],
+
+        }
+
+        var b = extend(true, obj1, obj2);
+        var c = extend(true, obj2, obj1);
+        console.log(b); //{ value: [5, 6, 7] }
+        console.log(c); //{ value: [5, 6, 7] }
+    </script>
+</body>
+
+</html>
