@@ -29,8 +29,13 @@
 
         var b = extend(true, obj1, obj2);
         var c = extend(true, obj2, obj1);
-        console.log(b); //{ value: [5, 6, 7] }
+        console.log(b); //{ value: [5, 6, 7] }0
         console.log(c); //{ value: [5, 6, 7] }
+
+
+        var type = Object.prototype.toString.call(undefined);
+        console.log(type);
+
     </script>
 </body>
 
